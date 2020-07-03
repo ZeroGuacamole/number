@@ -30,5 +30,3 @@ const parser = (number) => {
 
   return `${parsedNumber}${numberSuffix[numberLength]}`;
 };
-
-console.log(number("6104543054"))
