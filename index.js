@@ -8,7 +8,7 @@ const numberSuffix = {
   "9": "B",
 };
 
-export const number = (val = 0, options = {}) => {
+const number = (val = 0, options = {}) => {
   const toNumber = +val;
 
   if (isNaN(val) && !isFinite(val))
@@ -30,3 +30,5 @@ const parser = (number) => {
 
   return `${parsedNumber}${numberSuffix[numberLength]}`;
 };
+
+console.log(number("6104543054"))
