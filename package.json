@@ -10,8 +10,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint-fix"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint-fix",
+      "prettier --write"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -21,7 +27,9 @@
     "@babel/preset-env": "^7.10.4",
     "eslint": "^7.4.0",
     "husky": "^4.2.5",
-    "mocha": "^8.0.1"
+    "lint-staged": "^10.2.11",
+    "mocha": "^8.0.1",
+    "prettier": "^2.0.5"
   },
   "dependencies": {
     "@babel/polyfill": "^7.10.4"
